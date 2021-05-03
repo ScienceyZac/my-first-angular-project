@@ -42,7 +42,7 @@ export class AccountComponent {
         .then((response) => {
           console.log(response);
           response.forEach((guild) => {
-            guild.iconUrl = `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`;
+            guild.iconUrl = `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}`;
           });
           this.user.guilds = response;
         })
