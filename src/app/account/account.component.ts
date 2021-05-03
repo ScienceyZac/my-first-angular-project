@@ -49,4 +49,7 @@ export class AccountComponent {
         .catch(console.error);
     };
   };
+  featureExpand = (guild) => {
+    alert(guild.features.join(', ').replace(/_/g, ' ').toLowerCase());
+  };
 }

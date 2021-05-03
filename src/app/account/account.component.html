@@ -3,9 +3,22 @@
 </div>
 <div *ngIf="user">
   <h1>sup {{ user.username }}</h1>
-  <div *ngFor="let guild of user.guilds">
+  <p>ur in {{ user.guilds.length }} guilds</p>
+  <div class="guildInfo" *ngFor="let guild of user.guilds">
     <img src="{{ guild.iconUrl }}" />
     <p>{{ guild.name }}</p>
+    <div class="extraInfo">
+      <ul>
+        <li>id: {{ guild.id }}</li>
+        <li>is owner?: {{ guild.owner }}</li>
+        <li>
+          features:
+          <button (click)="featureExpand(guild)">
+            click 4 list of features
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 <div></div>
