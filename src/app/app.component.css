@@ -1,0 +1,21 @@
+.title {
+  display: flex;
+  justify-content: center;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+}
+.nav ul {
+  list-style: none;
+}
+.nav ul li {
+  text-decoration: none;
+}
+.nav ul li:hover {
+  border-style: none none solid none;
+  border-width: 2px;
+}
+.nav ul li a {
+  text-decoration: none;
+}

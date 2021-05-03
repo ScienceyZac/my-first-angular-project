@@ -2,9 +2,11 @@
   <meta http-equiv="refresh" content="0; url = /login" />
 </div>
 <div *ngIf="user">
-  <h1>sup {{ user.username }}</h1>
-  <p>ur in {{ user.guilds.length }} guilds</p>
-  <button (click)="filter()">add to server</button>
+  <div class="welcome">
+    <h1>sup {{ user.username }}</h1>
+    <p>ur in {{ user.guilds.length }} guilds</p>
+  </div>
+  <button class="filterBtn" (click)="filter()">add to server</button>
   <div class="guildInfo" *ngFor="let guild of user.guilds">
     <div *ngIf="filterIt && guild.owner">
       <img src="{{ guild.iconUrl }}" />
