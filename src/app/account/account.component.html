@@ -4,20 +4,46 @@
 <div *ngIf="user">
   <h1>sup {{ user.username }}</h1>
   <p>ur in {{ user.guilds.length }} guilds</p>
+  <button (click)="filter()">add to server</button>
   <div class="guildInfo" *ngFor="let guild of user.guilds">
-    <img src="{{ guild.iconUrl }}" />
-    <p>{{ guild.name }}</p>
-    <div class="extraInfo">
-      <ul>
-        <li>id: {{ guild.id }}</li>
-        <li>is owner?: {{ guild.owner }}</li>
-        <li>
-          features:
-          <button (click)="featureExpand(guild)">
-            click 4 list of features
-          </button>
-        </li>
-      </ul>
+    <div *ngIf="filterIt && guild.owner">
+      <img src="{{ guild.iconUrl }}" />
+      <p>{{ guild.name }}</p>
+      <div class="extraInfo">
+        <ul>
+          <li>id: {{ guild.id }}</li>
+          <li>
+            <a
+              href="https://discord.com/oauth2/authorize?client_id=817653964161548289&scope=bot&permissions=8&guild_id={{
+                guild.id
+              }}"
+              >click to invite</a
+            >
+          </li>
+          <li>
+            features:
+            <button (click)="featureExpand(guild)">
+              click 4 list of features
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div *ngIf="!filterIt">
+      <img src="{{ guild.iconUrl }}" />
+      <p>{{ guild.name }}</p>
+      <div class="extraInfo">
+        <ul>
+          <li>id: {{ guild.id }}</li>
+          <li>is owner?: {{ guild.owner }}</li>
+          <li>
+            features:
+            <button (click)="featureExpand(guild)">
+              click 4 list of features
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

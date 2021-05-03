@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AccountComponent {
   user;
+  filterIt;
   constructor() {
     this.getUser();
   }
@@ -51,5 +52,8 @@ export class AccountComponent {
   };
   featureExpand = (guild) => {
     alert(guild.features.join(', ').replace(/_/g, ' ').toLowerCase());
+  };
+  filter = () => {
+    this.filterIt ? (this.filterIt = false) : (this.filterIt = true);
   };
 }
