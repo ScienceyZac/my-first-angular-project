@@ -1,0 +1,11 @@
+<div *ngIf="user == 'not-in'">
+  <meta http-equiv="refresh" content="0; url = /login" />
+</div>
+<div *ngIf="user">
+  <h1>sup {{ user.username }}</h1>
+  <div *ngFor="let guild of user.guilds">
+    <img src="{{ guild.iconUrl }}" />
+    <p>{{ guild.name }}</p>
+  </div>
+</div>
+<div></div>
