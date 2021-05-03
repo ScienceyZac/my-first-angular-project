@@ -1,0 +1,14 @@
+.guildInfo {
+  transition: all 1s ease-in-out;
+  display: grid;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  margin-bottom: 10px;
+  margin-left: 30%;
+  width: 20%;
+}
+/* .guildInfo:hover {
+  background-color: transparent;
+  color: black;
+} */
