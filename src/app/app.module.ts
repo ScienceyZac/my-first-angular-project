@@ -4,12 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogInComponent } from './log-in/log-in.component';
-import { AccountComponent } from './account/account.component';
 import { FourOFourPageComponent } from './four-o-four-page/four-o-four-page.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, LogInComponent, AccountComponent, FourOFourPageComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    LogInComponent,
+    FourOFourPageComponent,
+    HomeComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
